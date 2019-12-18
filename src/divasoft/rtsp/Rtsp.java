@@ -368,6 +368,7 @@ public class Rtsp {
             // TODO: Статистика по работающим сервисам
             for (RtspBean rtspBean : LIST_CHECK) {
                 Element item = doc.createElement("item");
+                item.setAttribute("image_log", rtspBean.getRtspImageLog());
                 item.setAttribute("time", rtspBean.getWorkTime() + "");
                 item.setAttribute("url", rtspBean.getUrl());
                 item.setAttribute("host", rtspBean.getHost());
@@ -377,7 +378,6 @@ public class Rtsp {
                 item.setAttribute("is_port", (rtspBean.is_port()) ? "Y" : "N");
                 item.setAttribute("is_admin_port", (rtspBean.is_admin_port()) ? "Y" : "N");
                 item.setAttribute("is_image", (rtspBean.getImageEncoded().isEmpty()) ? "N" : "Y");
-                item.setAttribute("image_log", rtspBean.getRtspImageLog());
                 item.setTextContent(rtspBean.getImageEncoded());
                 rootElement.appendChild(item);
             }
