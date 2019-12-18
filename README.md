@@ -81,6 +81,7 @@ FLASHPHONER_PORTS = 1935|3478|5349|80|8080|8081|8082|443|8443|8444|8445|2000|909
 <report date="17-12-2019 11:05:39" items="2">
     <item admin_title="" image_log="ffmpeg version 3.4.6-0ubuntu0.18.04.1 Copyright (c) 2000-2019 the FFmpeg ..." host="192.168.0.12" is_admin_port="Y" is_image="N" is_ping="Y" is_port="Y" port="554" time="4667" url="rtsp://192.168.0.12:554/user=admin&amp;password=admin&amp;channel=1&amp;stream=1?.sdp"/>
     <item admin_title="Login" image_log="ffmpeg version 3.4.6-0ubuntu0.18.04.1 Copyright (c) 2000-2019 the FFmpeg ..." host="192.168.0.15" is_admin_port="Y" is_image="Y" is_ping="Y" is_port="Y" port="554" time="6417" url="rtsp://192.168.0.15:554/user=admin&amp;password=admin&amp;channel=1&amp;stream=1?.sdp"/>Вот тут будет содержимое изображения в base64</item>
+</report>
 ```
 
 ps. Всё это добро прикручивается к админке Битрикса, там уже дополняем дополнительной проверкой - запуск каждого потока, получение изображения средствами flashphoner-web-api. И формируем человекочитаемый отчёт по камерам.
